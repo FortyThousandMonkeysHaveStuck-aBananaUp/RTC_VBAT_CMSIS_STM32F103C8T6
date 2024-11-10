@@ -1,0 +1,218 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.2.13589/W32 for ARM                10/Nov/2024  13:16:18
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\Exe\RTC_project.out
+#    Map file     =  
+#        G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\List\RTC_project.map
+#    Command line =  
+#        -f C:\Users\Pz\AppData\Local\Temp\EW904F.tmp
+#        (G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\Obj\main.o
+#        G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\Obj\startup_stm32f103xb.o
+#        G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\Obj\system_stm32f1xx.o
+#        -o
+#        G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\Exe\RTC_project.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\List\RTC_project.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\ST\stm32f103x8.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x20004fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section   Kind        Address   Size  Object
+  -------   ----        -------   ----  ------
+"A0":                             0xec
+  .intvec   ro code  0x08000000   0xec  startup_stm32f103xb.o [1]
+                   - 0x080000ec   0xec
+
+"P1":                            0x47c
+  .text     ro code  0x080000ec  0x2e6  main.o [1]
+  .text     ro code  0x080003d4   0x68  system_stm32f1xx.o [1]
+  .text     ro code  0x0800043c   0x1a  cmain.o [4]
+  .text     ro code  0x08000456    0x4  low_level_init.o [3]
+  .text     ro code  0x0800045a    0x4  exit.o [3]
+  .text     ro code  0x08000460    0xa  cexit.o [4]
+  .text     ro code  0x0800046c   0x14  exit.o [5]
+  .text     ro code  0x08000480   0x10  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000490    0xc  cstartup_M.o [4]
+  .text     ro code  0x0800049c    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004a0    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004a4    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004a8    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004ac    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004b0    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004b4    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004b8    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004bc    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004c0    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004c4    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004c8    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004cc    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004d0    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004d4    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004d8    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004dc    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004e0    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004e4    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004e8    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004ec    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004f0    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004f4    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004f8    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x080004fc    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000500    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000504    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000508    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x0800050c    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000510    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000514    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000518    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x0800051c    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000520    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000524    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000528    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x0800052c    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000530    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000534    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000538    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x0800053c    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000540    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000544    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000548    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x0800054c    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000550    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000554    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000558    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x0800055c    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000560    0x4  startup_stm32f103xb.o [1]
+  .text     ro code  0x08000564    0x4  startup_stm32f103xb.o [1]
+                   - 0x08000568  0x47c
+
+"P2":                            0x800
+  CSTACK             0x20000000  0x800  <Block>
+    CSTACK  uninit   0x20000000  0x800  <Block tail>
+                   - 0x20000800  0x800
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  rw data
+    ------                 -------  -------
+G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\Obj: [1]
+    main.o                     742
+    startup_stm32f103xb.o      456
+    system_stm32f1xx.o         104
+    ---------------------------------------
+    Total:                   1 302
+
+command line: [2]
+    ---------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                       4
+    low_level_init.o             4
+    ---------------------------------------
+    Total:                       8
+
+rt7M_tl.a: [4]
+    cexit.o                     10
+    cmain.o                     26
+    cstartup_M.o                12
+    ---------------------------------------
+    Total:                      48
+
+shb_l.a: [5]
+    exit.o                      20
+    ---------------------------------------
+    Total:                      20
+
+    Gaps                         6
+    Linker created                    2 048
+-------------------------------------------
+    Grand Total:             1 384    2 048
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+?main                   0x0800043d        Code  Gb  cmain.o [4]
+CSTACK$$Base            0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit           0x20000800         --   Gb  - Linker created -
+GPIO_PB12_and_PB15_Config
+                        0x08000249  0x52  Code  Gb  main.o [1]
+RTC_Config              0x0800029b  0xe0  Code  Gb  main.o [1]
+RTC_IRQHandler          0x0800012f  0x60  Code  Gb  main.o [1]
+Region$$Table$$Base     0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000000         --   Gb  - Linker created -
+SystemInit              0x080003d5  0x4e  Code  Gb  system_stm32f1xx.o [1]
+System_Clock_Config     0x080001c3  0x86  Code  Gb  main.o [1]
+__NVIC_EnableIRQ        0x080000ed  0x1c  Code  Lc  main.o [1]
+__NVIC_SetPriority      0x08000109  0x26  Code  Lc  main.o [1]
+__cmain                 0x0800043d        Code  Gb  cmain.o [4]
+__exit                  0x0800046d  0x14  Code  Gb  exit.o [5]
+__iar_program_start     0x08000491        Code  Gb  cstartup_M.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001        Data  Gb  command line/config [2]
+__low_level_init        0x08000457   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000        Data  Gb  startup_stm32f103xb.o [1]
+_call_main              0x08000449        Code  Gb  cmain.o [4]
+_exit                   0x08000461        Code  Gb  cexit.o [4]
+_main                   0x08000453        Code  Gb  cmain.o [4]
+delay_whithout_interruption
+                        0x080003c5   0xe  Code  Gb  main.o [1]
+exit                    0x0800045b   0x4  Code  Gb  exit.o [3]
+main                    0x0800018f  0x34  Code  Gb  main.o [1]
+
+
+[1] = G:\0_YouTube_Master_Yoba\STM_4_RTC\RTC_project\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1 384 bytes of readonly  code memory
+  2 048 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
